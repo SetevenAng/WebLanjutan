@@ -11,7 +11,11 @@ server.listen(4000,function(){
     console.log("Server run");
 });
 
-var data = bodyParser.urlencoded({extended:false});
-server.post("/api/datamhs",data,function(req,res){
-    res.send(req.body);
+
+server.get("/api/cari",function(req,res,next){
+    var nama = req.query.nama;
+    console.log('nama : ',nama);
+    var umur = req.query.umur;
+    console.log('umur : ',umur);
+    res.send(umur);
 });

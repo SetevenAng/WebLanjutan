@@ -11,7 +11,9 @@ server.listen(4000,function(){
     console.log("Server run");
 });
 
-var data = bodyParser.urlencoded({extended:false});
-server.post("/api/datamhs",data,function(req,res){
-    res.send(req.body);
+
+server.get("/api/:nama/:nim",function(req,res){
+    res.statusCode = 200;
+    res.setHeader("Content-Type","text/plain");
+    res.send(req.params);
 });

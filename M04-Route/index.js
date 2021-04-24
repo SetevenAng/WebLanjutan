@@ -10,3 +10,8 @@ server.use(express.static(__dirname + "/publik"));
 server.listen(4000,function(){
     console.log("Server run");
 });
+
+var data = bodyParser.urlencoded({extended:false});
+server.post("/api/datamhs",data,function(req,res){
+    res.send(req.body);
+});

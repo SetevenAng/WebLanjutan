@@ -12,6 +12,6 @@ server.listen(4000,function(){
 });
 
 var data = bodyParser.urlencoded({extended:false});
-server.post("/api/datamhs",data,function(req,res){
+server.post("/api/dataperpustakaan",data,function(req,res){
     res.send(req.body);
 });

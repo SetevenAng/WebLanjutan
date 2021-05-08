@@ -11,11 +11,12 @@ server.listen(4000,function(){
     console.log("Server run");
 });
 
-
+//Menghitung Luas Segitiga
 server.get("/api/cari",function(req,res,next){
-    var nama = req.query.nama;
-    console.log('nama : ',nama);
-    var umur = req.query.umur;
-    console.log('umur : ',umur);
-    res.send(umur);
+    Alas = req.query.Alas;
+    console.log('Alas : ',Alas);
+    Tinggi = req.query.Tinggi;
+    console.log('Tinggi : ',Tinggi);
+    hasil = parseFloat(1/2)*parseInt(Alas)*parseInt(Tinggi);
+    res.send("Luas Segitiga : "+ hasil);
 });

@@ -4,7 +4,7 @@ fs.open("datamw.txt","w+",function(err,file){
     if(err) throw err;
 
     //Data yang akan kita tulis ke file
-    let data = "Kelas Mobile Dan Web";
+    let data = "Nama Saya Seteven Ang";
 
     //Tulis konten ke file
     fs.writeFile(file,data,(err) => {

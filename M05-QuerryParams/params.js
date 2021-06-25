@@ -11,9 +11,13 @@ server.listen(4000,function(){
     console.log("Server run");
 });
 
-
-server.get("/api/:nama/:nim",function(req,res){
+//Menghitung Luas Persegi
+server.get("/persegi/:angka1/:angka2",function(req,res){
+    angka1 = req.params.angka1;
+    angka2 = req.params.angka2;
+    hasil = parseInt(angka1)*parseInt(angka2);
+    var hasil1 = String(hasil)
     res.statusCode = 200;
-    res.setHeader("Content-Type","text/plain");
-    res.send(req.params);
+    res.setHeader("Content-Type","text/plan");
+    res.send("Luas Pesergi Panjang : " + hasil1);
 });
